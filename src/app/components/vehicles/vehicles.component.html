@@ -1,27 +1,38 @@
 <h1>Vehicles</h1>
-<div class="container main-container">
-    <table class="table ">
-        <thead>
-            <tr class="table-inverse">
-                <th>#</th>
-                <th>Marca</th>
-                <th>Modelo</th>
-                <th>Cilindraje</th>
-                <th>Kilometraje</th>
-                <th>Revision TCM</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let i of vehicles | keys;">
-                <th scope="row">1</th>
-                <td>{{vehicles[i].marca}}</td>
-                <td>{{vehicles[i].modelo}}</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-            </tr>
+<div class="row animated fadeIn fast">
+    <div class="container main-container">
+        <table class="table ">
+            <thead>
+                <tr class="table-inverse">
+                    <th>#</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Cilindraje</th>
+                    <th>Kilometraje</th>
+                    <th>Revision TCM</th>
+                    <th>Accion</th>
 
-        </tbody>
-    </table>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let k of vehicles | keys; let i = index">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{vehicles[k].marca}}</td>
+                    <td>{{vehicles[k].modelo}}</td>
+                    <td>{{vehicles[k].cilindraje}}</td>
+                    <td>{{vehicles[k].kilometraje}}</td>
+                    <td>{{vehicles[k].revisionTCM}}</td>
+                    <td class="text-right w120">
+                        <button type="button" class="btn btn-warning">Actualizar</button>
+                        <button type="button" class="btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-primary">Nuevo</button>
+                </div>
+
+
+            </tbody>
+        </table>
+    </div>
 </div>
