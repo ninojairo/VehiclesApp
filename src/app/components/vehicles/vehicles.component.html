@@ -1,33 +1,27 @@
 <h1>Vehicles</h1>
 <div class="container main-container">
-    <table class="table">
+    <table class="table ">
         <thead>
-            <tr>
+            <tr class="table-inverse">
                 <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Cilindraje</th>
+                <th>Kilometraje</th>
+                <th>Revision TCM</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr *ngFor="let i of vehicles | keys;">
                 <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
+                <td>{{vehicles[i].marca}}</td>
+                <td>{{vehicles[i].modelo}}</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
                 <td>@mdo</td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-            </tr>
+
         </tbody>
     </table>
 </div>
